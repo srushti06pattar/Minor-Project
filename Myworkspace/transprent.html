@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparent Background Image</title>
+<style>
+    .container {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Set the height as per your requirement */
+    }
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5; /* Adjust opacity as per your preference */
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white; /* Set text color */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <img src="/sdm.jpg" class="background-image" alt="Background Image">
+        <div class="content">
+            <h1>Your Content Goes Here</h1>
+            <p>This content will be displayed on top of the background image with transparency.</p>
+        </div>
+    </div>
+</body>
+</html>
+

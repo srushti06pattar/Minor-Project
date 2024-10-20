@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays with push function</title>
+</head>
+<body>
+    <center>
+        <label for="">Enter the college Name: </label>
+        <input type="text" id="txtCollegeName"><br/>
+
+                <label>Enter the Student USN:</label>
+                    <select id="DropDownList">
+                        <option>-select USN-</option>
+                        <option>2SD22CS1005</option>
+                        <option>2SD22CS001</option>
+                        <option>2SD22CS005</option>
+                    </select>
+        <input type="button" value="Save" onclick="SaveValues();">
+        <input type="button" value="displayValue" onclick="ReadValues();");>
+        <p id="result"></p>
+    </center>
+    <script> 
+        var collegeDatabase=[];
+        function SaveValues() {
+            //Access the GUI components
+            var name = document.getElementById("txtCollegeName").value;
+            var ddp  = document.getElementById("DropDownList").value;
+            //Insert the value in the array object
+            if(name != ""){
+                collegeDatabase.push(name);
+                collegeDatabase.push(ddp)
+                document.getElementById("txtCollegeName").value = "";
+                alert("Record is created!!!  " + name);
+            }else{
+                alert("Invalid Input");
+            }
+        }
+        function ReadValues() {
+            if(collegeDatabase.length > 0) {
+                console.log(collegeDatabase);
+
+                for (let index = 0; index < collegeDatabase.length; index++) {
+                    document.getElementById("result").innerHTML += collegeDatabase[index] + "<br/>";
+                }
+                document.getElementById("result").innerHTML = "List of colleges: " + collegeDatabase;
+            }else{
+                alert("Record not found");
+            }
+        }
+    </script>
+</body>
+</html>

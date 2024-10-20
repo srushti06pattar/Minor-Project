@@ -1,0 +1,14 @@
+127.0.0.1 - - [21/Jun/2024:12:35:50 +0530] "GET / HTTP/1.1" 404 748
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:36:08 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 150
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:36:44 +0530] "GET /MyFirstServlet_1/Vowel.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:36:54 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 157
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:47:43 +0530] "GET /MyFirstServlet_1/Vowel.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:47:57 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 193
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:55:15 +0530] "GET /MyFirstServlet_1/Vowel.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:55:21 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 193
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:12:55:37 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 194
+127.0.0.1 - - [21/Jun/2024:17:26:26 +0530] "GET / HTTP/1.1" 404 748
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:17:26:57 +0530] "GET /favicon.ico HTTP/1.1" 404 759
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:17:27:05 +0530] "POST /MyFirstServlet_1/VowelConst HTTP/1.1" 200 241
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:17:34:49 +0530] "GET /MyFirstServlet_1/Grade.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Jun/2024:17:34:56 +0530] "POST /MyFirstServlet_1/Grade.jsp HTTP/1.1" 200 367

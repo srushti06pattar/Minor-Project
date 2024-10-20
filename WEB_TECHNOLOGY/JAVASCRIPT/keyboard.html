@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Live Input Length</legend>
+        <label>Enter a String :</label>
+        <input type="text" name="str" id="str" onkeyup="strLength();">
+        <div id="result"></div>
+    </fieldset>
+
+    <!-- Extra code for understanding -->
+    <fieldset>
+        <legend>Use Case in Real life (Extra code)</legend>
+        <h3>Assume that Input value is password it verification as follows</h3>
+        <span id="passwordCheck"></span>
+    </fieldset>
+    <script>
+        function strLength() {
+            var inputVal = document.getElementById('str').value;
+            document.getElementById('result').innerHTML = "Length of the String is: "+ inputVal.length;
+
+            if(inputVal.length >= 8) {
+                document.getElementById('passwordCheck').innerHTML = "Good Password: ✅";
+            }else {
+                document.getElementById('passwordCheck').innerHTML = "Must be above 8 characters: ❌";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+</head>
+<body>
+    <h1 style="background-color:white; color:brown;"> <img src="C:\Users\ADC\OneDrive\Documents\html examples\cta activity\logoclg.png" width="100" height="120" align="left"/>
+        <p> &nbsp;&nbsp;SHRI DHARMASTHALA MANJUNATESHWARA COLLEGE OF <br> &nbsp; ENGINNERING AND TECHNOLOGY,<br> &nbsp; DHARWAD</p></h1>
+  &nbsp;
+    <center>   
+       <form>
+         <fieldset style="width: 350px; background-color: brown; color:white;line-height: 10px;" >
+               <table>
+                <tr>
+                    <td><label> User name:</label></td>
+                    <td><input type="text" name="txtusername" id="txtusername"></td>
+               </tr>
+               <br>
+               <tr>
+                   <td><label>usn or id:</label></td>
+                   <td><input type="text" name="txtusn" id="txtusn"></td>
+              </tr>
+              <br>
+               <tr>
+                   <td> <label> create Password:</label></td>
+                   <td><input type="password" name="txtPassword" id="txtPassword1" required></td><br>
+                </tr>
+                <tr>
+                   <td> <label>Confirm Password:</label></td>
+                   <td><input type="password" name="txtPassword" id="txtPassword2" required></td><br>
+                </tr>
+                <tr>
+                    <td><label>Select CRUD Operation:</label></td>
+                    <td>
+                        <select name="ddlCRUDOp">
+                            <option>-Select Operation Type-</option>
+                            <option>Create/Insert</option>
+                            <option>Read/Display</option>
+                            <option>Update</option>
+                            <option>Delete</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                   <td><input type="button" name="btnsubmit" value="Submit" onclick="throughJScode();"></td><br>
+                    <td><input type="button" name="btnsubmit" value="display" onclick="displaydata();"></td>
+                </tr>
+
+               </table>
+         </fieldset>
+         <span id="displayResult"></span>
+        </form>
+     </center>  
+</body>
+</html>
+<script type="text/javascript">
+      
+    function throughJScode(){
+        var name= document.getElementById("txtusername").value;
+        var usn=document.getElementById("txtusn").value;
+        var pwd1 = document.getElementById("txtPassword1").value;
+        var pwd2 = document.getElementById("txtPassword2").value;
+        
+        var namepatrn = /^[A-Za-z]+$/ ;
+        var usnptn = /^[A-Z0-9]+$/ ;
+        
+
+        if( pwd1.match(pwd2)){
+
+            if ( name.match(namepatrn) && usn.match(usnptn)){
+                window.location="Login_page.html";
+            }else{
+                alert("Your Name or usn pattern is incorrect !! ");
+        }
+    }
+    else{
+        alert("Your password isn't matched !!!");
+    }
+    alert("created account successfully");
+}
+
+
+function displaydata(){
+        var name= document.getElementById("txtusername").value;
+        var usn=document.getElementById("txtusn").value;
+        var pwd1 = document.getElementById("txtPassword1").value;
+        if(name != "" && usn != "" && pwd1 !=""){
+        //Displaying the selected values in a tabular format
+            document.getElementById("displayResult").innerHTML = "<table border=\"1\"><tr><th>Name</th><th>USN</th><th>Password</th></tr><tr><td>"+name+"</td>"+"<td>"+usn+"</td>"+"<td>"+pwd1+"</td></tr></table>";
+        }
+        else{
+            alert("You have missed out some of the input values!!!")
+        }
+}
+
+</script>

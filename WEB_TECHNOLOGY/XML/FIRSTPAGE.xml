@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personalinfo SYSTEM "PersonalInfo.dtd">
+<personalInfo>
+    <name>Srushti Pattar</name>
+    <contactNo>8792822841</contactNo>
+    <adarNo>2356768</adarNo>
+    <address>
+        
+        <place>Mudhol,Bagalkot</place>
+        <city>Mudhol</city>
+        <state>karnataka</state>
+        
+    </address>
+</personalInfo>

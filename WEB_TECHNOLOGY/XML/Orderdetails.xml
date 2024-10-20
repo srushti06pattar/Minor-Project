@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns="">
+    <order id="0221">
+        <name>SRUSHTI PATTAR</name>
+        <item-name>Laptop</item-name>
+        <Qty>4</Qty>
+        <price>1300000</price>
+        <address>
+            <place>Mudhol,Bagalkot</place>
+            <city>Mudhol</city>
+            <state>karnataka</state>
+            <country>India</country>
+        </address>
+    </order>
+    <order id="0222">
+        <name>Sanmati</name>
+        <item-name>keyboard</item-name>
+        <Qty>4</Qty>
+        <price>500000</price>
+        <address>
+            <place>Gadag</place>
+            <city>Gadag</city>
+            <state>karnataka</state>
+            <country>India</country>
+        </address>
+    </order>
+    <order id="0231">
+        <name>Ashwini</name>
+        <item-name>mouse</item-name>
+        <Qty>4</Qty>
+        <price>900000</price>
+        <address>
+            <place>sirisi,uttarkannada</place>
+            <city>Sirisi</city>
+            <state>karnaztaka</state>
+            <country>India</country>
+        </address>
+    </order>
+</orders>

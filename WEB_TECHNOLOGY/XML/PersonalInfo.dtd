@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT personalinfo (name,contact_no,branch)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT contact_no (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT aadharNo (#PCDATA)>
+<!ELEMENT Address (city,State,country)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT country (#PCDATA)>

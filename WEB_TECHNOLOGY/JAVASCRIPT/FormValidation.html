@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page validation</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Login Page</legend>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label>User Name: </label></td>
+                    <td><input type="text" name="txtBox" id="username"></td>
+                </tr>
+                <tr>
+                    <td><label>Password: </label></td>
+                    <td><input type="password" name="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Login" name="btn" onclick="Validate();"></td>
+                    <td><input type="reset" value="clear" name="btnClear"></td>
+                </tr>
+                <tr>
+                    <!-- Provide the path of the sign up page in href -->
+                    <td colspan="2"><a href="keyboard.htmls">Sign Up</a></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <script type="text/javascript">
+        function Validate() {
+            //Access the value of the GUI components
+            let UserName = document.getElementById("username").value;
+            let UserPassword = document.getElementById("password").value;
+
+            //Define the Regular Expression for Validation
+            let pattern1 = /^[a-zA-Z]*$/;          // Allows only uppercase & lowercase letters for the username
+            let pattern2 = /^[a-zA-Z0-9]*$/        // Allows both uppercase & lowercase letters along number from 0 to 9 
+            
+            
+            //NOW VALIDATING THE INPUT VALUES WITH REGULAR EXPRESSION
+            
+            //First level of the validation
+            if(UserName === "" && UserPassword === "") {
+                alert("First level: Input Fields are empty!!❌");
+            }else {
+                //Second level validations
+                if((UserName.match(pattern1)) && (UserPassword.match(pattern2))) {
+                    //Check if the Credentials are correct or not
+                    if(UserName === "arudanti" && UserPassword === "a") {
+                        confirm("Successfully Logged In✅✅")
+                    }else {
+                        alert("Wrong Credentials👎Try Again")
+                    }
+                }else{
+                    alert("Second level: UserName & Password didn't Match Pattern❌❌")
+                }
+            }
+            
+            
+            // Another way to define the Regular Expression is as follows
+            let RegExpObj = new RegExp("aru")   // Allows on the input value that start with "sdm"
+
+            //Using Test() function validate the against the regular functions
+            if(RegExpObj.test(UserName)) {
+                alert("User Name is VALID for Regular Exp: " + RegExpObj)
+            }else {
+                alert("INVALID Username for Regular Exp: " + RegExpObj)
+            }
+        }
+    </script>
+</body>
+</html>

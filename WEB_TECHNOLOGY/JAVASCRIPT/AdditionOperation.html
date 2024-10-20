@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Addition Operation  </title>
+</head>
+<body>
+    <fieldset>
+        <legend>Web Based Simple Calculator</legend>
+            <table>
+               <tr>
+                <td> <label>Enter First Number:</label></td>
+                <td><input type="number" id="textnum1" placeholder="Enter integer value"></td>
+               </tr>
+                <tr>
+                    <td> <label>Enter Second Number:</label></td>
+                <td><input type="number" id="textnum2" placeholder="Enter integer value"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="addtwonumbers();" >Add Numbers</button></td>
+                </tr>
+            
+            </table>
+            <span id="result"></span>
+     
+    </fieldset>
+</body>
+<script type="text/javascript">
+    function addtwonumbers(){
+        var result=parseInt(document.getElementById('textnum1').value)+parseInt(document.getElementById('textnum2').value);
+      //  document.write("the sum of two numbers",+result);
+      document.getElementById('result').innerText="The result is: " +result;
+    }
+
+</script>
+</html>

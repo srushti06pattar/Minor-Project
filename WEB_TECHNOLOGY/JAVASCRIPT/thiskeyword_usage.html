@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Validations</title>
+</head>
+<body>
+    <form action="">
+        <center>
+            <h3>Dropdown list with Form tag</h3>
+            <label>select an open elective course</label>
+            <select name="dropDownCourses">
+                <option type="text" value="0">--select course--</option>
+                <option type="text" value="1">web tech</option>
+                <option type="text" value="2">java</option>
+                <option type="text" value="3">machine learning</option>
+                <option type="text" value="4">data structure</option>
+            </select><br><br>
+            <input type="button" value="submit" onclick="readDisplayValue(this.form);">
+        </center>
+        <center>
+            <br><span id="result1"></span>
+            <br><span id="result2"></span>
+        </center>
+    </form>
+</body>
+<script>
+    function readDisplayValue(formObj) {
+
+        for(let i = 0;i < formObj.dropDownCourses.length;i++) {
+            if(formObj.dropDownCourses[i].selected) {
+                /* Depending on the question choose whether value/text or both to display */
+                document.getElementById('result1').innerHTML = "Selected Drop-Down menu item: " + formObj.dropDownCourses[i].text;
+                document.getElementById('result2').innerHTML = "Item value: " + formObj.dropDownCourses[i].value;
+
+            }
+        }
+    }
+</script>
+
+</html>

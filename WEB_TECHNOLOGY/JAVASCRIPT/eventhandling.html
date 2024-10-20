@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hnadling</title>
+</head>
+<body>
+    <div id ="Message" onmouseover="changeTextStyle();" onmouseout="restoreTextStyle()">
+        <span>
+            <h1>This is srushti pattar from CSE B div</h1>
+        </span>
+    </div>
+    <img src="/ca.jpg" id="pics" width="350" height="200" onmouseover="changeImage();" onmouseout="restoreImagee();">
+</body>
+<script type="text/javascript">
+    function changeTextStyle(){
+        document.getElementById("Message").style.color="red";
+    }
+    function restoreTextStyle(){
+        document.getElementById("Message").style.color="blue";
+    }
+    function changeImage(){
+        document.getElementById("pics").src="/girl.jpg";
+    }
+    function restoreImagee(){
+        document.getElementById("pics").src="/fries.jpg";
+    }
+</script>
+</html>

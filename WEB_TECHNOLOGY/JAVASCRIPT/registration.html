@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Student Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Course Registration Form</legend>
+        <table>
+            <tr>
+                <td><label>Enter the student Name:</label></td>
+                <td><input type="text" id="txtname" placeholder="Enter Student Name"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the student USN:</label></td>
+                <td>
+                    <select id="ddl_usn">
+                        <option>--Select USN--</option>
+                        <option>2SD22CS108</option>
+                        <option>2SD22CS107</option>
+                        <option>2SD22CS109</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>select Divison:</label></td>
+                <td>
+                   <input type="radio" name="rddivison" value="A-divison">A-divison
+                   <input type="radio" name="rddivison" value="B-divison">B-divison
+                  
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>select Course:</label></td>
+                <td>
+                   <input type="checkbox" name="chkcouses" value="Web Technology">Web technology
+                   <input type="checkbox" name="chkcourses" value="Advance - C">Advance - C
+                   <input type="checkbox" name="chkcourses" value="Python Programm">Python Programming
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Enter Registration Date:</label></td>
+                <td><input type="date" id="dtregistration"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Register" onclick="displayInfo()"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <span id="displayresult"></span>
+</body>
+<script type="text/javascript">
+    //Read GUI components
+    function displayInfo(){
+        var div_Value=null;
+        var chk_courses="";
+        var sname=document.getElementById("txtname").value;
+        var ddl_usn=document.getElementById("ddl_usn").value;
+        //Read radio button selection value
+        var rdvalue=document.getElementsByName("rddivison").value;
+        for(var i=0;i<rdvalue.length;i++){
+            if(rdvalue[i].checked){
+                div_Value=rdvalue[i].value;
+            }
+        }
+        alert(div_Value);
+    
+    //Read checkbox value
+    var chkvalue=document.getElementsByName("chkcourses");
+    for(var j=0;j<chkvalue.length;j++){
+        if(chkvalue[j].checked){
+        chk_courses +=chkvalue[j].value+" ";
+        }
+    }
+    alert(chk_courses);
+
+    //Read Date Values
+
+    var dtreg=document.getElementById("dtregistration");
+
+    document.getElementById("displayresult").innerHTML="<table border=\"1\"><tr><th>Name</th><th>USN</th><th>Dvison</th><th>Courses</th><th>Rgistration Date</th></tr><td>"+sName+"</td></table>";
+
+    }
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <form>
+        <label>Selectionof colors</label>
+        <select name="favcolor">
+            <option>blue</option>
+            <option>red</option>
+            <option>pink</option>
+            <option>green</option>
+        </select>
+        <input type="button" value="submit" onclick="check_color(this.form)">
+    </form>
+</body>
+<script type="text/javascript">
+    function check_color(f){
+        // if(f.favcolor[0].selected)
+        //     alert("fav clor is"+f.favcolor[0].value);
+        
+        // if(f.favcolor[1].selected)
+        //     alert("fav clor is"+f.favcolor[1].value);
+        
+        // if(f.favcolor[2].selected){
+        //     alert("fav clor is"+ f.favcolor[2].value);
+        // }
+        // if(f.favcolor[3].selected){
+        //     alert("fav clor is"+f.favcolor[3].value);
+        // }
+        for(var i=0;i<f.favcolor.length;i++){
+        if(f.favcolor[i].selected){
+            alert("fav color is"+f.favcolor[i].value)
+        }
+    }
+}
+     
+    
+</script>
+</html>

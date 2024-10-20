@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="mypage.php" method="post" onsubmit="throughJScode();"> -->
+        <form method="post">
+        <label>Enter The Value:</label>
+        <input type="text" name="txtvalue"><br>
+        <!-- <input type="button" name="btnsubmit" value="submit" onclick="throughJScode()"> -->
+        <input type="submit" name="btnsubmit" value="submit" >
+    </form>
+</body>
+<script type="text/javascript">
+    function throughJScode(){
+       
+        var confirmreturnvalue=confirm("do you want to submit");
+        if(confirmreturnvalue==true)
+            window.location=Mathfunwebpage.html;
+        else
+            window.location=greetingapp.js;
+    }
+</script>
+</html>

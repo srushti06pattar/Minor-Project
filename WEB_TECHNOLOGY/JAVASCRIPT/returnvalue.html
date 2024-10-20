@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Window Example</title>
+</head>
+
+<body>
+
+    <button onclick="confirmAction()">Delete Data</button>
+
+    <script>
+        function confirmAction() {
+            // Show confirmation dialog
+            var confirmation = confirm("Are you sure you want to delete this data?");
+
+            // Check user's choice
+            if (confirmation) {
+                // User clicked OK, proceed with deletion
+                deleteData();
+            } else {
+                // User clicked Cancel, do nothing
+                console.log("Deletion cancelled by user.");
+            }
+        }
+
+        function deleteData() {
+            // Perform deletion logic here
+            console.log("Data deleted successfully.");
+        }
+    </script>
+
+</body>
+
+</html>

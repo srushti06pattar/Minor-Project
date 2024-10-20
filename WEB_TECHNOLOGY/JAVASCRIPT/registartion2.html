@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Course Registration Form</legend>
+        <table>
+            <tr>
+                <td><label>Enter the Student Name:</label></td>
+                <td><input type="text" id="txtname" placeholder="Student Name"></td>
+            </tr>
+            <tr>
+                <td><label>Enter the Student USN:</label></td>
+                <td>
+                    <select id="ddl_usn">
+                        <option>-select USN-</option>
+                        <option>2SD22CS1005</option>
+                        <option>2SD22CS001</option>
+                        <option>2SD22CS005</option>
+                    </select>
+                </td>   
+            </tr>
+            <tr>
+                <td><label>Select Division</label></td>
+                <td>
+                    <input type="radio" name="rdDiv" value="A-Division" >A-division 
+                    <input type="radio" name="rdDiv" value="B-Division" >B-division 
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Courses</label></td>
+                <td>
+                    <input type="checkbox" name="checkCourse" value="Web-Technology">Web-Technology
+                    <input type="checkbox" name="checkCourse" value="Advanced Java">Advanced Java
+                    <input type="checkbox" name="checkCourse" value="Python programming">Python program
+                </td>
+            </tr>
+            <tr>
+                <td><label>Enter registration Date: </label></td>
+                <td><input type="date" id="dateReg"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="Register" onclick="DisplayInfo();"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <span id="result"></span>
+
+    <script>
+        var divisionValue = null;
+        var CoursesValue = "";
+
+        function DisplayInfo() {
+            /* Reading the GUI Components */
+
+            /* Name and USN */
+            let StudentName = document.getElementById("txtname").value;
+            let StudentUSN = document.getElementById("ddl_usn").value;
+
+            /* Division (radio btn value) */
+            let radioBtnValue = document.getElementsByName("rdDiv");
+            for(let i = 0; i < radioBtnValue.length; i++) {
+                if(radioBtnValue[i].checked) {
+                    divisionValue = radioBtnValue[i].value;
+                }
+            }
+
+            /* Course selected (CheckBox value) */
+            let checkBoxValue = document.getElementsByName("checkCourse");
+            for(let j = 0;j < checkBoxValue.length; j++) {
+                if(checkBoxValue[j].checked) {
+                    CoursesValue += checkBoxValue[j].value + " ";
+                }
+            }
+
+            /* Date Value */
+            let dateValue = document.getElementById("dateReg").value;
+
+            /* Validation if the details are entered or not */
+            if(StudentName != "" && StudentUSN != "-select USN-" && divisionValue != null && CoursesValue != "" && dateValue != "") {
+                document.getElementById("result").innerHTML = "<table border=\"1\"><tr><th>Name</th><th>USN</th><th>Division</th><th>Courses</th><th>Reg Date</th></tr><tr><td>"+StudentName+"</td>"+"<td>"+StudentUSN+"</td>"+"<td>"+divisionValue+"</td>"+"<td>"+CoursesValue+"</td>"+"<td>"+dateValue+"</td></tr></table>";
+            }else{
+                alert("invalid input")
+            }
+            
+        }
+    </script>
+</body>
+</html>

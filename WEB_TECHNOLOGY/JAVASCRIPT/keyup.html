@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter String</label>
+    <input type="text" id="txtstr" onkeyup="computestringlength()";>
+    <span id="result"></span>
+</body>
+<script type="text/javascript">
+    function computestringlength(){
+        var inputVal=document.getElementById("txtstr").value;
+        document.getElementById("result").innerText="string length is:" +inputVal.length;
+    }
+</script>
+</html>

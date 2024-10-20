@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+	<style type="text/css">
+    .p{
+        text-align: center;
+    }
+		*{
+			text-decoration: none;
+		}
+		.navbar{
+			background: rgb(20, 234, 241); font-family: calibri; padding-right: 85px;padding-left: 15px;
+            
+        }
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		
+		li{
+			font-family:  Calibri, 'Trebuchet MS', sans-serif; display: inline-block;
+		}
+		li a{
+			color: rgb(253, 0, 0); 
+            font-size: 25px;
+             font-weight: bold;
+             margin-right: 55px;
+             background-color: rgb(255, 255, 255);
+             padding-left: 20px;
+             padding-right: 20px;
+             border-radius: 20px;
+             transition: 0.4s ease-in-out;
+		}
+        li a:hover{
+            color: rgb(224, 238, 24);
+        }
+		.content{
+            display: flex;
+            flex-direction: column;
+            float: left;
+            align-content: center;
+            width: 200px;
+            height: auto;
+            margin: 20px;
+            color: #fff;
+            position: relative;
+        }
+		.form{
+            
+            width: 200px;
+            height: 150px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to bottom, rgb(171, 182, 184) , rgb(51, 42, 92));
+            position: absolute;
+            top: 100px;
+            transform: translate(0%,-5%);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+
+.form input{
+    width: 200px;
+    height: 35px;
+    background:#d1f060;
+    border-radius: 30px;
+    border-bottom: 1px solid #33ff00;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 80px;
+    font-family: sans-serif;
+}
+.form label{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(109, 21, 72);
+}
+.form option{
+    font-size: 15px;
+    color: #0a0a0a;
+}
+.form select{
+   text-align: center;
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><img src="/sdmcet-removebg-preview.png" width="330px"></img> </div>
+			<ul>
+				<li><a href="web_Page.html" >Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="administartion.html">Administration</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+    <center>
+       <form>
+        <div class="content">
+			<div class="form">
+                <tr><td><label> CSE Faculty</label></td>
+                    <td>
+                      <select id="faculty" onchange="displayInfo()">
+                        <option >--Select Laborotary--</option>
+                        <option value="Mr.Khan" data-description="Number Of PCs-40" smartboard="01" Contact="08045-57862" >Lab-01</option>
+                        <option value="Mr.Shek" data-description="Number Of PCs-35" smartboard="---" Contact="08045-57862" >Lab-02</option>
+                        <option value="Mrs.Aparna" data-description="Number Of PCs-50" smartboard="01" Contact="08045-57862" >Lab-03</option>
+                        <option value="Mr.Sagar" data-description="Number Of PCs-25" smartboard="---" Contact="08045-57862" >Lab-04</option>
+                       
+                      </select>
+                    </td>
+                  </tr>
+            </div>
+		</div>
+       </form>
+    </center>
+    
+    <div id="details"></div> 
+</body>
+<script>
+    function displayInfo(){
+        const dropdown = document.getElementById('faculty');
+    const selectedOption = dropdown.options[dropdown.selectedIndex];
+
+    const value = selectedOption.value;
+    const text = selectedOption.text;
+    const description = selectedOption.getAttribute('data-description');
+    const board = selectedOption.getAttribute('smartboard');
+    const conatct = selectedOption.getAttribute('Contact');
+  
+  
+
+    const detailsDiv = document.getElementById('details');
+    detailsDiv.innerHTML = `
+        <center>
+          <form>
+            <tabel >
+                </br></br></br></br>
+                <p style="font-size:30px"><strong>Selected Faculty Details:</strong></p>
+                <p style=""> <img src="/profile1.jpg " width="150px" padding-bottom:80px ></p>
+                <p><b>Laboratary:${text}</b></p>
+                <p>Lab Assistant: ${value}</p>
+                <p> ${description}</p>
+                <p>Number Of Smartboards: ${board}</p>
+                <p>Conatct Number: ${conatct}</p>
+                
+               
+              </tabel>
+          </form>
+        </center>
+    `;
+}
+    
+</script>
+</html>
+
+
+

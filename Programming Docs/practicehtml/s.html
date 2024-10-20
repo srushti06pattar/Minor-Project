@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Selection</title>
+</head>
+<body>
+    <h1>Select an option</h1>
+    <select id="dropdown" onchange="displaySelectedOption()">
+        <option value="1" data-description="This is option 1">Option 1</option>
+        <option value="2" data-description="This is option 2">Option 2</option>
+        <option value="3" data-description="This is option 3">Option 3</option>
+    </select>
+
+    <div id="details"></div>
+
+    <script type="text/javascript">
+        
+        function displaySelectedOption() {
+    const dropdown = document.getElementById('dropdown');
+    const selectedOption = dropdown.options[dropdown.selectedIndex];
+
+    const value = selectedOption.value;
+    const text = selectedOption.text;
+    const description = selectedOption.getAttribute('data-description');
+
+    const detailsDiv = document.getElementById('details');
+    detailsDiv.innerHTML = `
+        <p><strong>Selected Option Details:</strong></p>
+        <p>Value: ${value}</p>
+        <p>Text: ${text}</p>
+        <p>Description: ${description}</p>
+    `;
+
+    console.log(`Value: ${value}`);
+    console.log(`Text: ${text}`);
+    console.log(`Description: ${description}`);
+}
+
+    </script>
+</body>
+</html>

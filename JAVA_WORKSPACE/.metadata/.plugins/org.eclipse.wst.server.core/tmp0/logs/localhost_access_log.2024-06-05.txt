@@ -1,0 +1,8 @@
+127.0.0.1 - - [05/Jun/2024:07:06:12 +0530] "GET / HTTP/1.1" 404 748
+127.0.0.1 - - [05/Jun/2024:09:51:15 +0530] "GET / HTTP/1.1" 404 748
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:51:18 +0530] "GET /MyFirstServlet_1/SimpleCalci.jsp HTTP/1.1" 500 2184
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:51:18 +0530] "GET /favicon.ico HTTP/1.1" 404 759
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:52:16 +0530] "GET /MyFirstServlet_1/SimpleCalci.jsp HTTP/1.1" 500 2184
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:52:17 +0530] "GET /favicon.ico HTTP/1.1" 404 759
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:53:49 +0530] "GET /MyFirstServlet_1/SimpleCalci.jsp HTTP/1.1" 500 2550
+0:0:0:0:0:0:0:1 - - [05/Jun/2024:09:55:58 +0530] "GET /MyFirstServlet_1/SimpleCalci.jsp HTTP/1.1" 500 2550
