@@ -4,7 +4,7 @@ const Dashoboard = () => {
   return (
     <div>
       this is dashboard page
-      <a href='/'>Logout</a>
+      <a href="/">Logout</a>
     </div>
   )
 }

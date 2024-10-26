@@ -4,9 +4,9 @@ import './Login.css'
 const Login = () => {
   return (
     <div>
-      <a href="/Register"> TO Register</a>
+      <a href="/register"> TO Register</a>
       <br/>
-      <a href="/Dashboard"> TO Dashboard</a>
+      <a href="/dashboard"> TO Dashboard</a>
       <br/>
       this is login page
     </div>
