@@ -3,7 +3,8 @@ import React from 'react'
 const Dashoboard = () => {
   return (
     <div>
-      Dashboard
+      this is dashboard page
+      <a href='/'>Logout</a>
     </div>
   )
 }

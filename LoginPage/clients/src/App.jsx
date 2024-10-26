@@ -27,9 +27,7 @@ const router =createBrowserRouter([
 function App() {
   return (
     <div>
-    <Dashoboard/>
-    <Login/>
-    <Register/>
+    <RouterProvider router={router}/>
     </div>
   )
 }

@@ -4,7 +4,8 @@ import './Register.css'
 const Register = () => {
   return (
     <div>
-      Register
+      this is register page
+      <a href='/login'>TO Login</a>
     </div>
   )
 }
