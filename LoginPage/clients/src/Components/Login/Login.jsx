@@ -1,6 +1,6 @@
 import React from 'react'
 import './Login.css'
-import './App.css'
+import '../../App.scss'
 import {Link,NavLink} from 'react-router-dom'
 import video from '../../LoginAssets/video.mp4'
 import Logo from '../../LoginAssets/logo.png'
@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className="loginPage flex">
       <div className="container flex">
-        {/* <div className="videoDiv">
+        <div className="videoDiv">
           <video src={video} autoPlay muted loop></video>
 
           <div className="textDiv">
@@ -28,7 +28,7 @@ const Login = () => {
             <button className='btn'>Sign Up</button>
             </Link>
           </div>
-        </div> */}
+        </div>
 
         <div className="formDiv flex">
           <div className="header Div">

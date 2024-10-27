@@ -104,21 +104,21 @@ img,video{
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 7px 50px rgb(111, 114, 109);
+    box-shadow: 0 7px 50px rgb(249, 250, 249);
     .container {
         height: 85vh;
         width: 60%;
        margin: auto;
        justify-content: space-between;
        border-radius: 10px;
-       background: rgba(206, 27, 170, 0.782);
+       background: hsl(0,0%,91%)
     }
     .videoDiv{
         position:relative;
         display: flex;
         flex-basis: 50%;
         width: 60%;
-        height: 10%;
+        height: 100%;
         padding: 0 1.5rem;
         text-align: center;
         justify-content: center;
@@ -157,15 +157,15 @@ img,video{
             bottom: 10px;
             padding: 0 1rem;
             height: 60px;
-            background: rgba(151, 55, 55, 0.248);
+            background: rgba(255, 255, 255, 0.248);
             left: 10px;
             right: 10px;
             justify-content: space-between;
-            backdrop-filter: blur(.3px);
+            backdrop-filter: blur(1px);
             border-radius: 10px;
             
             .text{
-                color: rgb(243, 237, 237);
+                color: var(--whiteColor);
                 
             }
             .btn{
@@ -173,16 +173,15 @@ img,video{
                 color: var(--primaryColor);
                 padding: .8rem 1.5rem;
                 border-radius: 10px;
-                font-weight: 200;
+                font-weight: 400;
                 transition: .3s ease;
 
                 &:hover{
                     background: var(--hoverColor);
+                    color: var(--blackColor);
                 }
             }
-        }
-        
-          
+        }          
     }
     .formDiv{
         flex-basis: 50%;
@@ -206,12 +205,12 @@ img,video{
         }
     }
     .form{
-        gap: 1rem;
+        gap: 2rem;
 
         .inputDiv{
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             .icon{
-                color: var(--greyText);
+                color: var(--blackColor);
             }
             input{
                 background:none;
@@ -230,7 +229,8 @@ img,video{
                 gap: .5rem;
                 padding: 1rem;
                 background: var(--inputColor);
-                border-radius: 10px;
+                border-radius: 20px;
+               
             }
         }
         .btn{
