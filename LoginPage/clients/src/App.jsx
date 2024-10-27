@@ -1,4 +1,4 @@
-import './App.scss'
+import './App.css'
 import Dashoboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
