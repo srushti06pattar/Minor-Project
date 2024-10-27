@@ -1,5 +1,6 @@
 import React from 'react'
 import './Login.css'
+import './App.css'
 import {Link,NavLink} from 'react-router-dom'
 import video from '../../LoginAssets/video.mp4'
 import Logo from '../../LoginAssets/logo.png'
