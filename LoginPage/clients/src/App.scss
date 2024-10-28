@@ -111,13 +111,13 @@ img,video{
        margin: auto;
        justify-content: space-between;
        border-radius: 10px;
-       background: hsl(0,0%,91%)
+       background: hsl(0, 0%, 95%)
     }
     .videoDiv{
         position:relative;
         display: flex;
         flex-basis: 50%;
-        width: 60%;
+        width: 50%;
         height: 100%;
         padding: 0 1.5rem;
         text-align: center;
@@ -156,7 +156,7 @@ img,video{
             bottom: 10px;
             padding: 0 1rem;
             height: 60px;
-            background: rgba(255, 255, 255, 0.248);
+            background: rgba(230, 230, 230, 0.248);
             left: 10px;
             right: 10px;
             justify-content: space-between;
@@ -193,7 +193,7 @@ img,video{
             padding: 1.5rem 0;
         }
         img{
-            width: 70px;
+            width: 140px;
             padding-bottom: .5rem;
 
         }
@@ -204,7 +204,7 @@ img,video{
         }
     }
     .form{
-        gap: 2rem;
+        gap: 3rem;
 
         .inputDiv{
             margin-bottom: 12px;
@@ -227,7 +227,7 @@ img,video{
             .input{
                 gap: .5rem;
                 padding: 1rem;
-                background: var(--inputColor);
+                background: rgb(245, 244, 244);
                 border-radius: 20px;
                
             }
