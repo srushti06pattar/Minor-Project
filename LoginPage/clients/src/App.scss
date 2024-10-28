@@ -231,6 +231,14 @@ img,video{
                 border-radius: 20px;
                
             }
+            .input input {
+                background: none;
+                outline: none;
+                border: none;
+                width: 100%;  /* Ensure input takes full width inside the box */
+                color: var(--primaryColor);  /* Set text color */
+                font-size: var(--normalFontSize);  /* Use font-size from root variables */
+            }
         }
         .btn{
             padding: 0.5rem;
